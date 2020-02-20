@@ -9,7 +9,7 @@ class Points(models.Model):
     approve = models.BooleanField(default=False)
     attractions = models.ManyToManyField(Recreation)
     comments = models.ManyToManyField(Reviews)
-    adress = models.ForeignKey(Adress, on_delete=models.CASCADE)
+    adress = models.ForeignKey(Adress, on_delete=models.CASCADE, null=True, blank=True)
 
 
     def __self__(self):
